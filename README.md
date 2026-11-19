@@ -23,7 +23,7 @@ I have proposed an edge-sorting algorithm that generates all eight switching edg
 6. **Periodic steady state.** `x* = (I − G_p)⁻¹ H_p`, which exists when all eigenvalues of `G_p` lie inside the unit circle.
 7. **Small-signal model.** Linearising about the steady state gives `δx_{m+1} = A_d δx_m + B_D δD_m`, with `A_d = G_p(D_0)` and `B_D` computed by centred finite differences.
 
-The full derivation is in [`unified_model.pdf`](unified_model.pdf).
+The full derivation is in [`UnificationofDualActiveBridge.pdf`](UnificationofDualActiveBridge.pdf).
 
 ## Files
 
@@ -34,7 +34,7 @@ The full derivation is in [`unified_model.pdf`](unified_model.pdf).
 | `dab_linearize.m` | Periodic steady state, `A_d`, `B_D`, and the discrete-time state-space system |
 | `five_state_calculator.m` | Plots all five states over two periods at steady state |
 | `fig_link_current.png` | AC-link current for the 12 example modes |
-| `unified_model.pdf` | Derivation |
+| `UnificationofDualActiveBridge.pdf` | Derivation |
 
 ## How to run
 
