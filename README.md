@@ -8,6 +8,10 @@ Under TPS modulation, the three duty variables `D1`, `D2` and `D3` produce many 
 
 *Steady-state AC-link current `i_p` over two switching periods for the 12 example duty triplets in `dab_params.m`, all computed by the same `dab_period_map` function. (a)–(f): G2V modes 1–6; (g)–(l): V2G modes 1′–6′.*
 
+## Contributions
+
+I have proposed an edge-sorting algorithm that generates all eight switching edges of a period from the duty triplet, wraps them modulo 2π and sorts them, so that every TPS mode, in both forward and reverse power flow, falls into the same eight-interval frame without any per-mode equations. I have exploited the half-wave symmetry of the TPS edge set: the second-half edges are the first-half edges shifted by π, so all eight edges follow from only four phase angles. I have also exploited the periodicity of the converter: by wrapping the edges over one period and imposing `x_{m+1} = x_m`, the periodic steady state is obtained directly as `x* = (I − G_p)⁻¹ H_p`, without simulating the converter until it settles.
+
 ## Method
 
 1. **Switching edges.** For a duty triplet `D = [D1, D2, D3]`, the eight switching edges of one period are generated, wrapped modulo 2π and sorted. This turns every TPS mode into the same frame of eight sub-intervals.
